@@ -2,10 +2,10 @@
 /*
  * Plugin Name: AW Bloom Redirection
  * Version: 1.0
- * Plugin URI: http://jonathanbossenger.com/
- * Description: This is an empty shell for your next WordPress plugin.
- * Author: Jonathan Bossenger
- * Author URI: http://jonathanbossenger.com/
+ * Plugin URI: http://atlanticwave.co/
+ * Description: Redirect to a URL on successful Bloom subscription.
+ * Author: Atlantic Wave
+ * Author URI: http://atlanticwave.co/
  * Requires at least: 4.0
  * Tested up to: 4.0
  *
@@ -13,33 +13,16 @@
  * Domain Path: /lang/
  *
  * @package WordPress
- * @author Jonathan Bossenger
+ * @author Atlantic Wave
  * @since 1.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-// do your stuff here
-
-// add bloom sub menu item
-// bloom redirection form, lists all current optins
-// edit optin allows you to set a redirect url
-
 define( 'AW_BLOOM_REDIRECTION_PLUGIN_DIR', trailingslashit( dirname(__FILE__) ) );
 define( 'AW_BLOOM_REDIRECTION_PLUGIN_URI', plugins_url('', __FILE__) );
 
-/* enqueue scripts */
 function aw_enqueue_scripts() {
-	/*wp_dequeue_script( 'et_bloom-custom-js' );
-	wp_enqueue_script( 'aw_bloom-custom-js', AW_BLOOM_REDIRECTION_PLUGIN_URI . '/js/custom.js', array( 'jquery' ) );
-	$protocol = is_ssl() ? 'https' : 'http';
-	wp_localize_script( 'aw_bloom-custom-js', 'bloomSettings', array(
-		'ajaxurl'         => admin_url( 'admin-ajax.php', $protocol ),
-		'pageurl'         => ( is_singular( get_post_types() ) ? get_permalink() : '' ),
-		'stats_nonce'     => wp_create_nonce( 'update_stats' ),
-		'subscribe_nonce' => wp_create_nonce( 'subscribe' ),
-	) );
-	*/
 	$aw_enable_bloom_redirection = get_option( 'aw_enable_bloom_redirection', '' );
 	if ( 'on' == $aw_enable_bloom_redirection ){
 		$protocol = is_ssl() ? 'https' : 'http';
@@ -59,7 +42,6 @@ add_action('wp_enqueue_scripts', 'aw_enqueue_scripts', 99);
 
 function aw_add_bloom_redirection_submenu(){
 	add_menu_page( esc_html__( 'Bloom Redirects', 'bloom_redirection' ), esc_html__( 'Bloom Redirects', 'bloom_redirection' ), 'manage_options', 'aw_bloom_redirection_editor', 'aw_display_bloom_redirection_editor', 'dashicons-migrate' );
-	//add_submenu_page( 'et_bloom_redirects', esc_html__( 'Set URLS', 'bloom_redirection' ), esc_html__( 'Set URLS', 'bloom_redirection' ), 'manage_options', 'aw_bloom_redirection_editor', 'aw_display_bloom_redirection_editor' );
 }
 add_action('admin_menu', 'aw_add_bloom_redirection_submenu', 11);
 
@@ -139,4 +121,3 @@ function aw_display_bloom_redirection_editor() {
 	</div>
 	<?php
 }
-

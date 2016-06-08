@@ -91,24 +91,34 @@ function aw_display_bloom_redirection_editor() {
 			<p>Add a redirection url for your Bloom optins.</p>
 			<table class="form-table">
 				<tbody>
-				<tr>
-					<th scope="row">Enable redirection</th>
-					<td><input id="enable_bloom_redirection" type="checkbox" name="enable_bloom_redirection" value="on" <?php if ('on' == $aw_enable_bloom_redirection) { echo 'checked="checked"'; } ?>>
-						<label for="text_field">
-							<span class="description">Enable or disable redirection. If redirection is disabled, the standard Bloom subscribe action fires.</span>
-						</label>
-					</td>
-				</tr>
 
-				<?php foreach ( $bloom_optins as $option_key => $optin ) { ?>
-				<tr>
-					<th scope="row"><?php echo $optin['optin_name'] ?></th>
-					<td><input id="bloom_redirection_<?php echo $option_key ?>" type="text" name="bloom_redirection[<?php echo $option_key ?>]" value="<?php echo ( isset( $aw_bloom_redirections[$option_key] ) ) ? $aw_bloom_redirections[$option_key] : ''; ?>">
-						<label for="text_field">
-							<span class="description">Enter the Redirection URL for <?php echo $optin['optin_name'] ?>.</span>
-						</label>
-					</td>
-				</tr>
+				<?php if (empty($bloom_optins)) { ?>
+					<tr>
+						<th scope="row">Empty</th>
+						<td>You dont seem to have any optin forms. First setup a form in Bloom, then pop on over here to set up your redirect.</td>
+					</tr>
+				<?php } else { ?>
+
+					<tr>
+						<th scope="row">Enable redirection</th>
+						<td><input id="enable_bloom_redirection" type="checkbox" name="enable_bloom_redirection" value="on" <?php if ('on' == $aw_enable_bloom_redirection) { echo 'checked="checked"'; } ?>>
+							<label for="text_field">
+								<span class="description">Enable or disable redirection. If redirection is disabled, the standard Bloom subscribe action fires.</span>
+							</label>
+						</td>
+					</tr>
+
+					<?php foreach ( $bloom_optins as $option_key => $optin ) { ?>
+					<tr>
+						<th scope="row"><?php echo $optin['optin_name'] ?></th>
+						<td><input id="bloom_redirection_<?php echo $option_key ?>" type="text" name="bloom_redirection[<?php echo $option_key ?>]" value="<?php echo ( isset( $aw_bloom_redirections[$option_key] ) ) ? $aw_bloom_redirections[$option_key] : ''; ?>">
+							<label for="text_field">
+								<span class="description">Enter the Redirection URL for <?php echo $optin['optin_name'] ?>.</span>
+							</label>
+						</td>
+					</tr>
+					<?php } ?>
+
 				<?php } ?>
 
 				</tbody>

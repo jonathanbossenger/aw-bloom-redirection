@@ -25,13 +25,13 @@
       <file leaf-file-name="aw-bloom-redirection.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/aw-bloom-redirection.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2074">
-              <caret line="122" column="1" selection-start-line="122" selection-start-column="1" selection-end-line="122" selection-end-column="1" />
+            <state relative-caret-position="2108">
+              <caret line="124" column="20" selection-start-line="124" selection-start-column="20" selection-end-line="124" selection-end-column="20" />
               <folding>
                 <element signature="e#6#412#0#PHP" expanded="true" />
-                <marker date="1465419751216" expanded="true" signature="4126:4166" ph="..." />
-                <marker date="1465419751216" expanded="true" signature="4463:4584" ph="..." />
-                <marker date="1465419751216" expanded="true" signature="4668:4807" ph="..." />
+                <marker date="1465420044264" expanded="true" signature="4385:4426" ph="..." />
+                <marker date="1465420044264" expanded="true" signature="4725:4848" ph="..." />
+                <marker date="1465420044264" expanded="true" signature="4951:5090" ph="..." />
               </folding>
             </state>
           </provider>
@@ -62,8 +62,8 @@
       <file leaf-file-name="functions.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1241">
-              <caret line="73" column="66" selection-start-line="73" selection-start-column="66" selection-end-line="73" selection-end-column="66" />
+            <state relative-caret-position="221">
+              <caret line="13" column="27" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -95,9 +95,9 @@
         <option value="$PROJECT_DIR$/dashboard.html" />
         <option value="$PROJECT_DIR$/function.js" />
         <option value="$PROJECT_DIR$/js/custom.js" />
-        <option value="$PROJECT_DIR$/js/functions.js" />
         <option value="$PROJECT_DIR$/lang/aw-bloom-redirection.pot" />
         <option value="$PROJECT_DIR$/aw-bloom-redirection.php" />
+        <option value="$PROJECT_DIR$/js/functions.js" />
       </list>
     </option>
   </component>
@@ -253,12 +253,12 @@
       <workItem from="1465243899518" duration="657000" />
       <workItem from="1465281779324" duration="59000" />
       <workItem from="1465393617092" duration="68000" />
-      <workItem from="1465393701871" duration="15496000" />
+      <workItem from="1465393701871" duration="15959000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19676000" />
+    <option name="totallyTimeSpent" value="20139000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -314,9 +314,9 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#6#412#0#PHP" expanded="true" />
-            <marker date="1465419751216" expanded="true" signature="4126:4166" ph="..." />
-            <marker date="1465419751216" expanded="true" signature="4463:4584" ph="..." />
-            <marker date="1465419751216" expanded="true" signature="4668:4807" ph="..." />
+            <marker date="1465420044264" expanded="true" signature="4385:4426" ph="..." />
+            <marker date="1465420044264" expanded="true" signature="4725:4848" ph="..." />
+            <marker date="1465420044264" expanded="true" signature="4951:5090" ph="..." />
           </folding>
         </state>
       </provider>
@@ -343,9 +343,9 @@
           <caret line="29" column="137" selection-start-line="29" selection-start-column="137" selection-end-line="29" selection-end-column="152" />
           <folding>
             <element signature="e#6#412#0#PHP" expanded="true" />
-            <marker date="1465419751216" expanded="true" signature="4126:4166" ph="..." />
-            <marker date="1465419751216" expanded="true" signature="4463:4584" ph="..." />
-            <marker date="1465419751216" expanded="true" signature="4668:4807" ph="..." />
+            <marker date="1465420044264" expanded="true" signature="4385:4426" ph="..." />
+            <marker date="1465420044264" expanded="true" signature="4725:4848" ph="..." />
+            <marker date="1465420044264" expanded="true" signature="4951:5090" ph="..." />
           </folding>
         </state>
       </provider>
@@ -372,9 +372,9 @@
           <caret line="29" column="137" selection-start-line="29" selection-start-column="137" selection-end-line="29" selection-end-column="152" />
           <folding>
             <element signature="e#6#412#0#PHP" expanded="true" />
-            <marker date="1465419751216" expanded="true" signature="4126:4166" ph="..." />
-            <marker date="1465419751216" expanded="true" signature="4463:4584" ph="..." />
-            <marker date="1465419751216" expanded="true" signature="4668:4807" ph="..." />
+            <marker date="1465420044264" expanded="true" signature="4385:4426" ph="..." />
+            <marker date="1465420044264" expanded="true" signature="4725:4848" ph="..." />
+            <marker date="1465420044264" expanded="true" signature="4951:5090" ph="..." />
           </folding>
         </state>
       </provider>
@@ -401,9 +401,9 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#6#412#0#PHP" expanded="true" />
-            <marker date="1465419751216" expanded="true" signature="4126:4166" ph="..." />
-            <marker date="1465419751216" expanded="true" signature="4463:4584" ph="..." />
-            <marker date="1465419751216" expanded="true" signature="4668:4807" ph="..." />
+            <marker date="1465420044264" expanded="true" signature="4385:4426" ph="..." />
+            <marker date="1465420044264" expanded="true" signature="4725:4848" ph="..." />
+            <marker date="1465420044264" expanded="true" signature="4951:5090" ph="..." />
           </folding>
         </state>
       </provider>
@@ -448,14 +448,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="73" column="66" selection-start-line="73" selection-start-column="66" selection-end-line="73" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/uninstall.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -482,15 +474,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="27" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/aw-bloom-redirection.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2074">
-          <caret line="122" column="1" selection-start-line="122" selection-start-column="1" selection-end-line="122" selection-end-column="1" />
+        <state relative-caret-position="2108">
+          <caret line="124" column="20" selection-start-line="124" selection-start-column="20" selection-end-line="124" selection-end-column="20" />
           <folding>
             <element signature="e#6#412#0#PHP" expanded="true" />
-            <marker date="1465419751216" expanded="true" signature="4126:4166" ph="..." />
-            <marker date="1465419751216" expanded="true" signature="4463:4584" ph="..." />
-            <marker date="1465419751216" expanded="true" signature="4668:4807" ph="..." />
+            <marker date="1465420044264" expanded="true" signature="4385:4426" ph="..." />
+            <marker date="1465420044264" expanded="true" signature="4725:4848" ph="..." />
+            <marker date="1465420044264" expanded="true" signature="4951:5090" ph="..." />
           </folding>
         </state>
       </provider>

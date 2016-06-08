@@ -71,6 +71,9 @@ jQuery(document).ready(function(){
                                 this_form.parent().parent().find( '.et_bloom_form_header' ).addClass( 'et_bloom_with_error' );
                             }
                             if ( data.success && '' == current_container ) {
+                                this_form.parent().find( '.et_bloom_success_message' ).addClass( 'et_bloom_animate_message' );
+                                this_form.parent().find( '.et_bloom_success_container' ).addClass( 'et_bloom_animate_success' );
+                                this_form.remove();
                                 window.location.href = redirectURL;
                             }
                         }

@@ -8,6 +8,32 @@ jQuery(document).ready(function(){
 
     jQuery('.et_bloom_submit_subscription').on('click', function(event){
         event.preventDefault();
+
+        // if form has action
+        var thisForm = jQuery(this).parents('form');
+
+        if ( thisForm.attr('action').length && thisForm.attr('action').length != '' ){
+
+            var redirectURL = '';
+            var bloomRedirections = bloomRedirectionSettings['redirections'];
+            if (optin_id in bloomRedirections){
+                redirectURL = bloomRedirections[optin_id];
+            }else {
+                redirectURL = bloomRedirectionSettings['site_url'];
+            }
+
+            jQuery.ajax({
+                type: 'POST',
+                url: jQuery(this).attr('action'),
+                data: form.serialize(),
+                dataType: 'json',
+                success: function(response) {
+                    window.location.href = redirectURL;
+                }
+            });
+            return false;
+        }
+
         if ( !jQuery( this ).hasClass('et_bloom_submit_subscription_locked') ){
             aw_perform_subscription( jQuery( this ), '', '', '', '' );
         }else {
@@ -38,7 +64,7 @@ jQuery(document).ready(function(){
             this_form.find( '.et_bloom_subscribe_email input' ).addClass( 'et_bloom_warn_field' );
         } else {
             var redirectURL = '';
-            bloomRedirections = bloomRedirectionSettings['redirections'];
+            var bloomRedirections = bloomRedirectionSettings['redirections'];
             if (optin_id in bloomRedirections){
                 redirectURL = bloomRedirections[optin_id];
             }else {
@@ -71,10 +97,10 @@ jQuery(document).ready(function(){
                                 this_form.parent().parent().find( '.et_bloom_form_header' ).addClass( 'et_bloom_with_error' );
                             }
                             if ( data.success && '' == current_container ) {
+                                window.location.href = redirectURL;
                                 this_form.parent().find( '.et_bloom_success_message' ).addClass( 'et_bloom_animate_message' );
                                 this_form.parent().find( '.et_bloom_success_container' ).addClass( 'et_bloom_animate_success' );
                                 this_form.remove();
-                                window.location.href = redirectURL;
                             }
                         }
                     }

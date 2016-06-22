@@ -6,6 +6,38 @@ jQuery(document).ready(function(){
         });
     });
 
+
+    jQuery('.et_bloom_custom_html_form form').on('submit', function(event){
+        event.preventDefault();
+
+        // if form has action
+        var thisForm = jQuery(this).find('form');
+
+        if ( thisForm.attr('action').length && thisForm.attr('action').length != '' ){
+
+            var redirectURL = '';
+            var bloomRedirections = bloomRedirectionSettings['redirections'];
+            if (optin_id in bloomRedirections){
+                redirectURL = bloomRedirections[optin_id];
+            }else {
+                redirectURL = bloomRedirectionSettings['site_url'];
+            }
+
+            jQuery.ajax({
+                type: 'POST',
+                url: jQuery(this).attr('action'),
+                data: form.serialize(),
+                dataType: 'json',
+                success: function(response) {
+                    window.location.href = redirectURL;
+                }
+            });
+            return false;
+        }
+
+    });
+
+
     jQuery('.et_bloom_submit_subscription').on('click', function(event){
         event.preventDefault();
 

@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name: AW Bloom Redirection
- * Version: 1.0
+ * Version: 1.1
  * Plugin URI: http://atlanticwave.co/
  * Description: Redirect to a URL on successful Bloom subscription.
  * Author: Atlantic Wave

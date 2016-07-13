@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name: AW Bloom Redirection
- * Version: 1.1
+ * Version: 1.1.0
  * Plugin URI: http://atlanticwave.co/
  * Description: Redirect to a URL on successful Bloom subscription.
  * Author: Atlantic Wave
@@ -62,9 +62,7 @@ function aw_display_bloom_redirection_editor() {
 			}
 			echo '<div id="message" class="updated fade"><p><strong>Bloom redirection urls saved.</strong></p></div>';
 		}
-	} else {
-		// show some error message here?
-	}
+	} 
 
 	$aw_enable_bloom_redirection = get_option( 'aw_enable_bloom_redirection', '' );
 	$aw_bloom_redirections = get_option( 'aw_bloom_redirection', array() );

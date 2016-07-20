@@ -43,9 +43,10 @@ jQuery(document).ready(function(){
 
         // if form has action
         var thisForm = jQuery(this).parents('form');
+        var thisFormActionAttr = $(thisForm).attr('action');
 
-        if ( thisForm.attr('action').length && thisForm.attr('action').length != '' ){
-
+        // For some browsers, `attr` is undefined; for others, `attr` is false. Check for both.
+        if (typeof thisFormActionAttr !== typeof undefined && thisFormActionAttr !== false) {
             var redirectURL = '';
             var bloomRedirections = bloomRedirectionSettings['redirections'];
             if (optin_id in bloomRedirections){
@@ -56,7 +57,7 @@ jQuery(document).ready(function(){
 
             jQuery.ajax({
                 type: 'POST',
-                url: jQuery(this).attr('action'),
+                url: thisFormActionAttr,
                 data: form.serialize(),
                 dataType: 'json',
                 success: function(response) {

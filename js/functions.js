@@ -43,7 +43,7 @@ jQuery(document).ready(function(){
 
         // if form has action
         var thisForm = jQuery(this).parents('form');
-        var thisFormActionAttr = $(thisForm).attr('action');
+        var thisFormActionAttr = jQuery(thisForm).attr('action');
 
         // For some browsers, `attr` is undefined; for others, `attr` is false. Check for both.
         if (typeof thisFormActionAttr !== typeof undefined && thisFormActionAttr !== false) {

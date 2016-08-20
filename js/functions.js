@@ -74,7 +74,7 @@ jQuery(document).ready(function(){
                 container_id = current_container.data( 'container_id' ),
                 page_id = current_container.data( 'page_id' ),
                 optin_id = current_container.data( 'optin_id' );
-            aw_perform_subscription( $( this ), current_container, container_id, page_id, optin_id );
+                aw_perform_subscription( jQuery( this ), current_container, container_id, page_id, optin_id );
         }
         return false;
     });

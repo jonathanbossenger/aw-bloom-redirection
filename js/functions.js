@@ -74,7 +74,7 @@ jQuery(document).ready(function(){
                 container_id = current_container.data( 'container_id' ),
                 page_id = current_container.data( 'page_id' ),
                 optin_id = current_container.data( 'optin_id' );
-                aw_perform_subscription( jQuery( this ), current_container, container_id, page_id, optin_id );
+            aw_perform_subscription( jQuery( this ), current_container, container_id, page_id, optin_id );
         }
         return false;
     });
@@ -123,6 +123,7 @@ jQuery(document).ready(function(){
                     if ( data ) {
                         if ( '' != current_container && ( data.success || 'Invalid email' != data.error ) ) {
                             unlock_content( current_container, container_id, locked_page_id, locked_optin_id );
+                            window.location.href = redirectURL;
                         } else {
                             if ( data.error ) {
                                 this_form.find( '.et_bloom_error_message' ).remove();
@@ -141,5 +142,27 @@ jQuery(document).ready(function(){
             });
         }
     }
+
+    // utility functions copied from bloom plugin
+    function unlock_content( current_container, container_id, locked_page_id, locked_optin_id ) {
+        set_cookie( 365, 'et_bloom_unlocked' + locked_optin_id + locked_page_id + '=true' );
+        //current_container.find( '.et_bloom_locked_form' ).replaceWith( $locked_containers[container_id] );
+        //current_container.find( '.et_bloom_locked_content' ).css( { 'display' : 'block' } );
+    }
+
+    function set_cookie( $expire, $cookie_content ) {
+        var $cookie_content = '' == $cookie_content ? 'etBloomCookie=true' : $cookie_content;
+        cookieExpire = setCookieExpire( $expire );
+        document.cookie = $cookie_content + cookieExpire + "; path=/";
+    }
+
+    function setCookieExpire( days ) {
+        var ms = days*24*60*60*1000;
+        var date = new Date();
+        date.setTime( date.getTime() + ms );
+        return "; expires=" + date.toUTCString();
+    }
+    // utility functions copied from bloom plugin
+
 });
 

@@ -6,27 +6,28 @@ jQuery(document).ready(function(){
         });
     });
 
-
     jQuery('.et_bloom_custom_html_form form').on('submit', function(event){
         event.preventDefault();
-
+        var thisForm = jQuery(this);
+        var optin_id = '';
+        var current_container =thisForm.parents('.et_bloom_custom_html_form');
+        optin_id = current_container.data( 'optin_id' );
         // if form has action
-        var thisForm = jQuery(this).find('form');
-
-        if ( thisForm.attr('action').length && thisForm.attr('action').length != '' ){
-
+        var thisFormActionAttr = thisForm.attr('action');
+        // For some browsers, `attr` is undefined; for others, `attr` is false. Check for both.
+        if (typeof thisFormActionAttr !== typeof undefined && thisFormActionAttr !== false) {
             var redirectURL = '';
             var bloomRedirections = bloomRedirectionSettings['redirections'];
+
             if (optin_id in bloomRedirections){
                 redirectURL = bloomRedirections[optin_id];
             }else {
                 redirectURL = bloomRedirectionSettings['site_url'];
             }
-
             jQuery.ajax({
                 type: 'POST',
-                url: jQuery(this).attr('action'),
-                data: form.serialize(),
+                url: thisFormActionAttr,
+                data: thisForm.serialize(),
                 dataType: 'json',
                 success: function(response) {
                     window.location.href = redirectURL;
@@ -34,17 +35,15 @@ jQuery(document).ready(function(){
             });
             return false;
         }
-
     });
 
 
     jQuery('.et_bloom_submit_subscription').on('click', function(event){
         event.preventDefault();
-
+        var optin_id = '';
         // if form has action
         var thisForm = jQuery(this).parents('form');
         var thisFormActionAttr = jQuery(thisForm).attr('action');
-
         // For some browsers, `attr` is undefined; for others, `attr` is false. Check for both.
         if (typeof thisFormActionAttr !== typeof undefined && thisFormActionAttr !== false) {
             var redirectURL = '';
@@ -58,7 +57,7 @@ jQuery(document).ready(function(){
             jQuery.ajax({
                 type: 'POST',
                 url: thisFormActionAttr,
-                data: form.serialize(),
+                data: thisForm.serialize(),
                 dataType: 'json',
                 success: function(response) {
                     window.location.href = redirectURL;

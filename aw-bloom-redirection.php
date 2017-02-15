@@ -114,11 +114,6 @@ function aw_display_bloom_redirection_editor() {
 								<span class="description">Enter the Redirection URL for <?php echo $optin['optin_name'] ?>.</span>
 							</label>
 						</td>
-						<td><input id="bloom_redirection_open_<?php echo $option_key ?>" type="text" name="bloom_redirection_open[<?php echo $option_key ?>]" value="<?php echo ( isset( $aw_bloom_redirections[$option_key] ) ) ? $aw_bloom_redirections[$option_key] : ''; ?>">
-							<label for="text_field">
-								<span class="description">Enter the Redirection URL for <?php echo $optin['optin_name'] ?>.</span>
-							</label>
-						</td>
 					</tr>
 					<?php } ?>
 
